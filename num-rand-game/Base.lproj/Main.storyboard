@@ -123,9 +123,11 @@
                         <outlet property="numLabel" destination="6wK-sd-wfd" id="7DO-0x-muo"/>
                         <outlet property="progressView" destination="IUX-8a-fNd" id="tf1-CJ-ftI"/>
                         <outlet property="scoreLabel" destination="dgw-uy-qod" id="vVV-F5-91F"/>
+                        <segue destination="niw-UA-Xhq" kind="unwind" identifier="goToMainScreen" animates="NO" unwindAction="unwindToMainScreenWithSegue:" id="vZC-E8-hHX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjx-YP-wYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="niw-UA-Xhq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="818.84057971014499" y="75.669642857142847"/>
         </scene>
