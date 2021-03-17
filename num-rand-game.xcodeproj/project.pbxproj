@@ -61,11 +61,11 @@
 				017A63C62602300600730865 /* AppDelegate.swift */,
 				017A63C82602300600730865 /* SceneDelegate.swift */,
 				017A63CA2602300600730865 /* ViewController.swift */,
+				017A63DD26023BB100730865 /* GamePlayViewController.swift */,
 				017A63CC2602300600730865 /* Main.storyboard */,
 				017A63CF2602300700730865 /* Assets.xcassets */,
 				017A63D12602300700730865 /* LaunchScreen.storyboard */,
 				017A63D42602300700730865 /* Info.plist */,
-				017A63DD26023BB100730865 /* GamePlayViewController.swift */,
 			);
 			path = "num-rand-game";
 			sourceTree = "<group>";

@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="20" y="76"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Play View Controller-->
         <scene sceneID="lxo-aj-CrG">
             <objects>
-                <viewController id="dVJ-d4-1bc" sceneMemberID="viewController">
+                <viewController id="dVJ-d4-1bc" customClass="GamePlayViewController" customModule="num_rand_game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kc1-zp-1eo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,9 @@
                                         <state key="normal" title="TRUE">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="trueDidTouch:" destination="dVJ-d4-1bc" eventType="touchUpInside" id="ztp-x7-D5a"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-6L-2gZ">
                                         <rect key="frame" x="207" y="0.0" width="207" height="110"/>
@@ -83,6 +86,9 @@
                                         <state key="normal" title="FALSE">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="falseDidTouch:" destination="dVJ-d4-1bc" eventType="touchUpInside" id="TIm-ij-tOX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -113,6 +119,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8G8-LA-O1g"/>
+                    <connections>
+                        <outlet property="numLabel" destination="6wK-sd-wfd" id="7DO-0x-muo"/>
+                        <outlet property="progressView" destination="IUX-8a-fNd" id="tf1-CJ-ftI"/>
+                        <outlet property="scoreLabel" destination="dgw-uy-qod" id="vVV-F5-91F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjx-YP-wYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
