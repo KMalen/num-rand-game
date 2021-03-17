@@ -20,6 +20,9 @@
                                 <rect key="frame" x="101.5" y="416" width="211" height="64"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <segue destination="dVJ-d4-1bc" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="3xk-ug-obp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHG-25-VC9">
                                 <rect key="frame" x="69.5" y="260" width="275.5" height="46"/>
@@ -28,13 +31,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="mj3-N8-gUU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lgr-hO-26X" firstAttribute="top" secondItem="cHG-25-VC9" secondAttribute="bottom" constant="110" id="6Dr-M4-mJu"/>
-                            <constraint firstItem="lgr-hO-26X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ATk-Fl-25b"/>
+                            <constraint firstItem="lgr-hO-26X" firstAttribute="centerX" secondItem="mj3-N8-gUU" secondAttribute="centerX" id="ATk-Fl-25b"/>
                             <constraint firstItem="lgr-hO-26X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M6I-Vu-pHU"/>
-                            <constraint firstItem="cHG-25-VC9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pRz-Qg-74O"/>
+                            <constraint firstItem="cHG-25-VC9" firstAttribute="centerX" secondItem="mj3-N8-gUU" secondAttribute="centerX" id="pRz-Qg-74O"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -42,10 +45,95 @@
             </objects>
             <point key="canvasLocation" x="20" y="76"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lxo-aj-CrG">
+            <objects>
+                <viewController id="dVJ-d4-1bc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kc1-zp-1eo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgw-uy-qod">
+                                <rect key="frame" x="140" y="166" width="134" height="45.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 &gt; 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wK-sd-wfd">
+                                <rect key="frame" x="133" y="409" width="148.5" height="78"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ly5-Ix-w8j">
+                                <rect key="frame" x="0.0" y="752" width="414" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h6-LQ-SnU">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="110"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                        <state key="normal" title="TRUE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-6L-2gZ">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="110"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                        <state key="normal" title="FALSE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IUX-8a-fNd">
+                                <rect key="frame" x="0.0" y="742" width="414" height="10"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="NqL-Cd-2TC"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FMs-fu-DGC"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ly5-Ix-w8j" firstAttribute="top" secondItem="IUX-8a-fNd" secondAttribute="bottom" id="2ky-XZ-W3A"/>
+                            <constraint firstItem="IUX-8a-fNd" firstAttribute="leading" secondItem="FMs-fu-DGC" secondAttribute="leading" id="530-ww-SKs"/>
+                            <constraint firstItem="dgw-uy-qod" firstAttribute="top" secondItem="FMs-fu-DGC" secondAttribute="top" constant="122" id="9wc-5z-8I1"/>
+                            <constraint firstItem="ly5-Ix-w8j" firstAttribute="bottom" secondItem="FMs-fu-DGC" secondAttribute="bottom" id="S1I-od-OMG"/>
+                            <constraint firstItem="ly5-Ix-w8j" firstAttribute="trailing" secondItem="FMs-fu-DGC" secondAttribute="trailing" id="X0h-x5-Hkq"/>
+                            <constraint firstItem="ly5-Ix-w8j" firstAttribute="bottom" secondItem="FMs-fu-DGC" secondAttribute="bottom" id="c7B-Y0-GEF"/>
+                            <constraint firstItem="6wK-sd-wfd" firstAttribute="centerY" secondItem="Kc1-zp-1eo" secondAttribute="centerY" id="dQ1-Jf-ceh"/>
+                            <constraint firstItem="6wK-sd-wfd" firstAttribute="centerX" secondItem="FMs-fu-DGC" secondAttribute="centerX" id="dgc-Vh-xpS"/>
+                            <constraint firstItem="dgw-uy-qod" firstAttribute="centerX" secondItem="FMs-fu-DGC" secondAttribute="centerX" id="e57-Ke-mEa"/>
+                            <constraint firstItem="ly5-Ix-w8j" firstAttribute="leading" secondItem="FMs-fu-DGC" secondAttribute="leading" id="gNt-kS-8CM"/>
+                            <constraint firstItem="ly5-Ix-w8j" firstAttribute="top" secondItem="6wK-sd-wfd" secondAttribute="bottom" constant="265" id="j6k-Cb-kQT"/>
+                            <constraint firstItem="IUX-8a-fNd" firstAttribute="trailing" secondItem="FMs-fu-DGC" secondAttribute="trailing" id="maq-It-peR"/>
+                            <constraint firstItem="ly5-Ix-w8j" firstAttribute="centerX" secondItem="FMs-fu-DGC" secondAttribute="centerX" id="n7r-5z-Y52"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8G8-LA-O1g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mjx-YP-wYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.84057971014499" y="75.669642857142847"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
