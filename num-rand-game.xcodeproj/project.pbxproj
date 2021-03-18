@@ -14,6 +14,7 @@
 		017A63D02602300700730865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017A63CF2602300700730865 /* Assets.xcassets */; };
 		017A63D32602300700730865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017A63D12602300700730865 /* LaunchScreen.storyboard */; };
 		017A63DE26023BB100730865 /* GamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63DD26023BB100730865 /* GamePlayViewController.swift */; };
+		017A63E426039D9B00730865 /* SetupGameUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63E326039D9B00730865 /* SetupGameUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		017A63D22602300700730865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		017A63D42602300700730865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		017A63DD26023BB100730865 /* GamePlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayViewController.swift; sourceTree = "<group>"; };
+		017A63E326039D9B00730865 /* SetupGameUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGameUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				017A63C62602300600730865 /* AppDelegate.swift */,
 				017A63C82602300600730865 /* SceneDelegate.swift */,
 				017A63CA2602300600730865 /* ViewController.swift */,
+				017A63E326039D9B00730865 /* SetupGameUserViewController.swift */,
 				017A63DD26023BB100730865 /* GamePlayViewController.swift */,
 				017A63CC2602300600730865 /* Main.storyboard */,
 				017A63CF2602300700730865 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 				017A63CB2602300600730865 /* ViewController.swift in Sources */,
 				017A63C72602300600730865 /* AppDelegate.swift in Sources */,
 				017A63DE26023BB100730865 /* GamePlayViewController.swift in Sources */,
+				017A63E426039D9B00730865 /* SetupGameUserViewController.swift in Sources */,
 				017A63C92602300600730865 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
