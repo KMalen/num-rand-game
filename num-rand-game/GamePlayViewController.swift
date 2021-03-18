@@ -37,10 +37,13 @@ class GamePlayViewController: UIViewController {
     
 
     @IBAction func trueDidTouch(_ sender: UIButton) {
-        
+        answer = true
+        checkAnswerFromUser()
     }
     
     @IBAction func falseDidTouch(_ sender: UIButton) {
+        answer = false
+        checkAnswerFromUser()
     }
     
     func setupGame(){
@@ -54,11 +57,11 @@ class GamePlayViewController: UIViewController {
         progress = timeLeft / givenTime
         progressView.setProgress(progress, animated: false)
         
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(timeStep), target: self, selector: #selector(gameLoop), userInfo: nil, repeats: false)
-        
         if timeLeft <= 0 {
             performSegue(withIdentifier: "goToMainScreen", sender: self)
         }
+        
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(timeStep), target: self, selector: #selector(gameLoop), userInfo: nil, repeats: false)
     }
     
     func resetGame(){
@@ -70,6 +73,16 @@ class GamePlayViewController: UIViewController {
         timeLeft = givenTime
         progress = 1.0
         progressView.setProgress(progress, animated: false)
+    }
+    
+    func checkAnswerFromUser(){
+        if answer == (firstNum > secondNum) {
+            score += 1
+            scoreLabel.text = "Score: \(score)"
+            resetGame()
+        } else {
+            performSegue(withIdentifier: "goToMainScreen", sender: self)
+        }
     }
     
 }
