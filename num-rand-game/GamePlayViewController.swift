@@ -85,4 +85,11 @@ class GamePlayViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMainScreen" {
+            let destination = segue.destination as! ViewController
+            destination.prevScore = score
+        }
+    }
+    
 }

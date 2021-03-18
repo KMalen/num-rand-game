@@ -40,6 +40,9 @@
                             <constraint firstItem="cHG-25-VC9" firstAttribute="centerX" secondItem="mj3-N8-gUU" secondAttribute="centerX" id="pRz-Qg-74O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="prevScoreLabel" destination="cHG-25-VC9" id="QLI-GO-W0z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

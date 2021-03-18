@@ -9,13 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var prevScoreLabel: UILabel!
+    
+    var prevScore = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 
     @IBAction func unwindToMainScreen(segue: UIStoryboardSegue){
-        
+        prevScoreLabel.text = "Previous Score: \(prevScore)"
     }
 
 }
