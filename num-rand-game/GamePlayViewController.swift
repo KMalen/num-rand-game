@@ -32,7 +32,6 @@ class GamePlayViewController: UIViewController {
         super.viewDidLoad()
 
         setupGame()
-        
     }
     
 
