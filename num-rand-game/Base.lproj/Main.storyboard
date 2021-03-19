@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="1486" y="76"/>
         </scene>
-        <!--Setup Game User View Controller-->
+        <!--Setup Difficulty View Controller-->
         <scene sceneID="Ohg-pS-eIk">
             <objects>
-                <viewController id="8PD-vk-bJ8" customClass="SetupGameUserViewController" customModule="num_rand_game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8PD-vk-bJ8" customClass="SetupDifficultyViewController" customModule="num_rand_game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PTx-rf-bsO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,7 +164,7 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                         <state key="normal" title="Medium"/>
                                         <connections>
-                                            <segue destination="dVJ-d4-1bc" kind="presentation" identifier="medium" modalPresentationStyle="fullScreen" id="8DX-Y0-lE3"/>
+                                            <segue destination="dVJ-d4-1bc" kind="presentation" identifier="medium" animates="NO" modalPresentationStyle="fullScreen" id="8DX-Y0-lE3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh7-Dd-EJE">
@@ -172,7 +172,7 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                         <state key="normal" title="Unreal"/>
                                         <connections>
-                                            <segue destination="dVJ-d4-1bc" kind="presentation" identifier="unreal" modalPresentationStyle="fullScreen" id="OQJ-xN-STF"/>
+                                            <segue destination="dVJ-d4-1bc" kind="presentation" identifier="unreal" animates="NO" modalPresentationStyle="fullScreen" id="OQJ-xN-STF"/>
                                         </connections>
                                     </button>
                                 </subviews>

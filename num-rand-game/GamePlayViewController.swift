@@ -15,8 +15,11 @@ class GamePlayViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     
     var score = 0
-    var firstNum = 0
-    var secondNum = 0
+    var difficulty = ""
+    
+    var firstGameNum = 0
+    var secondGameNum = 0
+    
     let minRand = 1
     let maxRand = 10
     
@@ -42,19 +45,24 @@ class GamePlayViewController: UIViewController {
     
     @IBAction func trueDidTouch(_ sender: UIButton) {
         answer = true
-        checkAnswerFromUserExpr()
+        checkAnswerFromUser()
     }
     
     @IBAction func falseDidTouch(_ sender: UIButton) {
         answer = false
-        checkAnswerFromUserExpr()
+        checkAnswerFromUser()
     }
     
     func setupGame(){
         score = 0
-        //resetGame()
-        createExpr()
+        resetGame()
         gameLoop()
+    }
+    
+    func setProgressView(){
+        timeLeft = givenTime
+        progress = 1.0
+        progressView.setProgress(progress, animated: false)
     }
     
     @objc func gameLoop(){
@@ -69,18 +77,16 @@ class GamePlayViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(timeStep), target: self, selector: #selector(gameLoop), userInfo: nil, repeats: false)
     }
     
-    func resetGame(){
-        firstNum = Int(arc4random_uniform(UInt32(maxRand-minRand+1)))
-        secondNum = Int(arc4random_uniform(UInt32(maxRand-minRand+1)))
+    func createEasyExpr(){
+        firstGameNum = Int(arc4random_uniform(UInt32(maxRand-minRand+1)))
+        secondGameNum = Int(arc4random_uniform(UInt32(maxRand-minRand+1)))
         
-        numLabel.text = "\(firstNum) > \(secondNum)"
+        numLabel.text = "\(firstGameNum) > \(secondGameNum)"
         
-        timeLeft = givenTime
-        progress = 1.0
-        progressView.setProgress(progress, animated: false)
+        setProgressView()
     }
     
-    func createExpr(){
+    func createMediumExpr(){
         for num in 0...1 {
             firstExpr[num] = Int(arc4random_uniform(UInt32(maxRand-minRand+1))) + 1
             secondExpr[num] = Int(arc4random_uniform(UInt32(maxRand-minRand+1))) + 1
@@ -90,50 +96,52 @@ class GamePlayViewController: UIViewController {
         
         numLabel.text = "\(firstExpr[0]) \(arithmeticSigns[signsForExpr]) \(firstExpr[1]) > \(secondExpr[0]) \(arithmeticSigns[signsForExpr]) \(secondExpr[1])"
         
-        timeLeft = givenTime
-        progress = 1.0
-        progressView.setProgress(progress, animated: false)
+        setProgressView()
     }
     
-    func checkAnswerFromUserExpr(){
-        var firstExprAnswer = 0
-        var secondExprAnswer = 0
+    // generate answers for medium expressions
+    func generateAnswersExprNums(){
         
         switch signsForExpr {
         case 0:
-            firstExprAnswer = firstExpr[0] * firstExpr[1]
-            secondExprAnswer = secondExpr[0] * secondExpr[1]
+            firstGameNum = firstExpr[0] * firstExpr[1]
+            secondGameNum = secondExpr[0] * secondExpr[1]
         case 1:
-            firstExprAnswer = firstExpr[0] - firstExpr[1]
-            secondExprAnswer = secondExpr[0] - secondExpr[1]
+            firstGameNum = firstExpr[0] - firstExpr[1]
+            secondGameNum = secondExpr[0] - secondExpr[1]
         case 2:
-            firstExprAnswer = firstExpr[0] + firstExpr[1]
-            secondExprAnswer = secondExpr[0] + secondExpr[1]
+            firstGameNum = firstExpr[0] + firstExpr[1]
+            secondGameNum = secondExpr[0] + secondExpr[1]
         case 3:
-            firstExprAnswer = firstExpr[0] / firstExpr[1]
-            secondExprAnswer = secondExpr[0] / secondExpr[1]
+            firstGameNum = firstExpr[0] / firstExpr[1]
+            secondGameNum = secondExpr[0] / secondExpr[1]
         default:
             break
         }
-        
-        if answer == (firstExprAnswer > secondExprAnswer) {
-            score += 1
-            scoreLabel.text = "Score: \(score)"
-            createExpr()
-        } else {
-            performSegue(withIdentifier: "goToMainScreen", sender: self)
-        }
-        
     }
     
     func checkAnswerFromUser(){
-        if answer == (firstNum > secondNum) {
+        if answer == (firstGameNum > secondGameNum) {
             score += 1
             scoreLabel.text = "Score: \(score)"
             resetGame()
         } else {
             performSegue(withIdentifier: "goToMainScreen", sender: self)
         }
+    }
+    
+    func resetGame() {
+        
+        switch difficulty {
+        case "easy":
+            createEasyExpr()
+        case "medium":
+            createMediumExpr()
+            generateAnswersExprNums()
+        default:
+            break
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

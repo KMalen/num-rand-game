@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SetupGameUserViewController: UIViewController {
+class SetupDifficultyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,13 @@ class SetupGameUserViewController: UIViewController {
             
             switch segue.identifier {
             case "easy":
-                vc.givenTime = 2.5
+                vc.difficulty = "easy"
+                vc.givenTime = 3.0
             case "medium":
-                vc.givenTime = 1.5
+                vc.difficulty = "medium"
+                vc.givenTime = 2.5
             case "unreal":
+                vc.difficulty = "unreal"
                 vc.givenTime = 1.0
             default:
                 break
