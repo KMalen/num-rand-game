@@ -23,16 +23,27 @@ class GamePlayViewController: UIViewController {
     let minRand = 1
     let maxRand = 10
     
+    // vars for medium exrp
     var firstExpr = [0,0]
     var secondExpr = [0,0]
     let arithmeticSigns = ["*", "-", "+", ":"]
     var signsForExpr = 0
     
+    // vars for hard expr
+    var powForSecondNum = 0
+    var firstHardNum = 0
+    var secondHardNum = 0
+    let sqrtSign = "\u{221a}"
+    let powDict = ["\u{2070}":0, "\u{00b9}":1, "\u{00b2}":2, "\u{00b3}":3]
+    let pows = ["\u{2070}", "\u{00b9}", "\u{00b2}", "\u{00b3}"]
+    
+    // vars for proggress
     var timeLeft: Float = 2.0
     var givenTime: Float = 2.0
     var progress: Float = 1.0
-    var answer = false
     var timeStep: Float = 0.02
+    
+    var answer = false
     
     var timer: Timer?
     
@@ -100,7 +111,7 @@ class GamePlayViewController: UIViewController {
     }
     
     // generate answers for medium expressions
-    func generateAnswersExprNums(){
+    func generateMediumAnswers(){
         
         switch signsForExpr {
         case 0:
@@ -120,6 +131,23 @@ class GamePlayViewController: UIViewController {
         }
     }
     
+    func createHardExpr(){
+        firstHardNum = Int(arc4random_uniform(UInt32(100))) + 1
+        secondHardNum = Int(arc4random_uniform(UInt32(10))) + 1
+        powForSecondNum = Int(arc4random_uniform(UInt32(3)))
+        
+        numLabel.text = "\(sqrtSign)\(firstHardNum) > \(secondHardNum)\(pows[powForSecondNum])"
+        
+        setProgressView()
+    }
+    
+    func generateHardAnswers(){
+        
+        firstGameNum = Int(sqrt(Double(firstHardNum)))
+        secondGameNum = Int(pow(Double(secondHardNum), Double(powDict[pows[powForSecondNum]]!)))
+        
+    }
+    
     func checkAnswerFromUser(){
         if answer == (firstGameNum > secondGameNum) {
             score += 1
@@ -137,7 +165,10 @@ class GamePlayViewController: UIViewController {
             createEasyExpr()
         case "medium":
             createMediumExpr()
-            generateAnswersExprNums()
+            generateMediumAnswers()
+        case "hard":
+            createHardExpr()
+            generateHardAnswers()
         default:
             break
         }

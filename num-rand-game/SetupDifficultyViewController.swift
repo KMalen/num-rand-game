@@ -26,9 +26,9 @@ class SetupDifficultyViewController: UIViewController {
             case "medium":
                 vc.difficulty = "medium"
                 vc.givenTime = 2.5
-            case "unreal":
-                vc.difficulty = "unreal"
-                vc.givenTime = 1.0
+            case "hard":
+                vc.difficulty = "hard"
+                vc.givenTime = 3.0
             default:
                 break
             }

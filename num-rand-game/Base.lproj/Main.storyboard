@@ -172,7 +172,7 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                         <state key="normal" title="Unreal"/>
                                         <connections>
-                                            <segue destination="dVJ-d4-1bc" kind="presentation" identifier="unreal" animates="NO" modalPresentationStyle="fullScreen" id="OQJ-xN-STF"/>
+                                            <segue destination="dVJ-d4-1bc" kind="presentation" identifier="hard" animates="NO" modalPresentationStyle="fullScreen" id="OQJ-xN-STF"/>
                                         </connections>
                                     </button>
                                 </subviews>
