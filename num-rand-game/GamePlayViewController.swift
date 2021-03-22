@@ -27,7 +27,7 @@ class GamePlayViewController: UIViewController {
     var firstExpr = [0,0]
     var secondExpr = [0,0]
     let arithmeticSigns = ["*", "-", "+", ":"]
-    var signsForExpr = 0
+    var signsForExpr = [0,0]
     
     // vars for hard expr
     var powForSecondNum = 0
@@ -101,11 +101,13 @@ class GamePlayViewController: UIViewController {
         for num in 0...1 {
             firstExpr[num] = Int(arc4random_uniform(UInt32(maxRand-minRand+1))) + 1
             secondExpr[num] = Int(arc4random_uniform(UInt32(maxRand-minRand+1))) + 1
+            
+            signsForExpr[num] = Int(arc4random_uniform(3))
         }
         
-        signsForExpr = Int(arc4random_uniform(3))
         
-        numLabel.text = "\(firstExpr[0]) \(arithmeticSigns[signsForExpr]) \(firstExpr[1]) > \(secondExpr[0]) \(arithmeticSigns[signsForExpr]) \(secondExpr[1])"
+        
+        numLabel.text = "\(firstExpr[0]) \(arithmeticSigns[signsForExpr[0]]) \(firstExpr[1]) > \(secondExpr[0]) \(arithmeticSigns[signsForExpr[1]]) \(secondExpr[1])"
         
         setProgressView()
     }
@@ -113,18 +115,27 @@ class GamePlayViewController: UIViewController {
     // generate answers for medium expressions
     func generateMediumAnswers(){
         
-        switch signsForExpr {
+        switch signsForExpr[0] {
         case 0:
             firstGameNum = firstExpr[0] * firstExpr[1]
-            secondGameNum = secondExpr[0] * secondExpr[1]
         case 1:
             firstGameNum = firstExpr[0] - firstExpr[1]
-            secondGameNum = secondExpr[0] - secondExpr[1]
         case 2:
             firstGameNum = firstExpr[0] + firstExpr[1]
-            secondGameNum = secondExpr[0] + secondExpr[1]
         case 3:
             firstGameNum = firstExpr[0] / firstExpr[1]
+        default:
+            break
+        }
+        
+        switch signsForExpr[1] {
+        case 0:
+            secondGameNum = secondExpr[0] * secondExpr[1]
+        case 1:
+            secondGameNum = secondExpr[0] - secondExpr[1]
+        case 2:
+            secondGameNum = secondExpr[0] + secondExpr[1]
+        case 3:
             secondGameNum = secondExpr[0] / secondExpr[1]
         default:
             break

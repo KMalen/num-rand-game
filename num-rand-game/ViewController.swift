@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var prevScoreLabel: UILabel!
+    @IBOutlet weak var multiplayerButton: UIButton!
     
     var prevScore = 0
     
@@ -29,6 +30,10 @@ class ViewController: UIViewController {
         startGameButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         startGameButton.layer.backgroundColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
         startGameButton.layer.cornerRadius = 15
+        
+        multiplayerButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        multiplayerButton.layer.backgroundColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
+        multiplayerButton.layer.cornerRadius = 15
     }
 
 }

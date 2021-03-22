@@ -17,7 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgr-hO-26X">
-                                <rect key="frame" x="50" y="416" width="314" height="64"/>
+                                <rect key="frame" x="82" y="416" width="250" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="EGV-6e-83Q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
@@ -37,8 +40,6 @@
                             <constraint firstItem="lgr-hO-26X" firstAttribute="top" secondItem="cHG-25-VC9" secondAttribute="bottom" constant="110" id="6Dr-M4-mJu"/>
                             <constraint firstItem="lgr-hO-26X" firstAttribute="centerX" secondItem="mj3-N8-gUU" secondAttribute="centerX" id="ATk-Fl-25b"/>
                             <constraint firstItem="lgr-hO-26X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M6I-Vu-pHU"/>
-                            <constraint firstItem="mj3-N8-gUU" firstAttribute="trailing" secondItem="lgr-hO-26X" secondAttribute="trailing" constant="50" id="T8c-KQ-A1o"/>
-                            <constraint firstItem="lgr-hO-26X" firstAttribute="leading" secondItem="mj3-N8-gUU" secondAttribute="leading" constant="50" id="mUN-GY-ORJ"/>
                             <constraint firstItem="cHG-25-VC9" firstAttribute="centerX" secondItem="mj3-N8-gUU" secondAttribute="centerX" id="pRz-Qg-74O"/>
                         </constraints>
                     </view>
@@ -152,10 +153,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Aq-l0-7br">
-                                <rect key="frame" x="74" y="438.5" width="266" height="259.5"/>
+                                <rect key="frame" x="74" y="414.5" width="266" height="283.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opV-iE-VHb">
-                                        <rect key="frame" x="0.0" y="0.0" width="266" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="266" height="81"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                         <state key="normal" title="Easy"/>
                                         <connections>
@@ -163,7 +164,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhI-jE-OqL">
-                                        <rect key="frame" x="0.0" y="93" width="266" height="73.5"/>
+                                        <rect key="frame" x="0.0" y="101" width="266" height="81.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                         <state key="normal" title="Medium"/>
                                         <connections>
@@ -171,7 +172,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh7-Dd-EJE">
-                                        <rect key="frame" x="0.0" y="186.5" width="266" height="73"/>
+                                        <rect key="frame" x="0.0" y="202.5" width="266" height="81"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                         <state key="normal" title="Hard"/>
                                         <connections>
@@ -189,8 +190,7 @@
                             <constraint firstItem="ohv-Jn-IN5" firstAttribute="bottom" secondItem="4Aq-l0-7br" secondAttribute="bottom" constant="164" id="QcK-e8-5Qu"/>
                             <constraint firstItem="4Aq-l0-7br" firstAttribute="centerX" secondItem="PTx-rf-bsO" secondAttribute="centerX" id="Zrz-tX-b3U"/>
                             <constraint firstItem="c1m-lz-Ebc" firstAttribute="top" secondItem="ohv-Jn-IN5" secondAttribute="top" constant="215" id="eTA-Rf-4mp"/>
-                            <constraint firstItem="4Aq-l0-7br" firstAttribute="top" secondItem="c1m-lz-Ebc" secondAttribute="bottom" constant="134" id="gzf-fG-two"/>
-                            <constraint firstItem="4Aq-l0-7br" firstAttribute="top" secondItem="c1m-lz-Ebc" secondAttribute="bottom" constant="134" id="igi-PT-ywK"/>
+                            <constraint firstItem="4Aq-l0-7br" firstAttribute="top" secondItem="c1m-lz-Ebc" secondAttribute="bottom" constant="110" id="idr-Jc-Y4J"/>
                             <constraint firstItem="c1m-lz-Ebc" firstAttribute="centerX" secondItem="PTx-rf-bsO" secondAttribute="centerX" id="uOZ-Vt-udo"/>
                         </constraints>
                     </view>

@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		01281E292604F2D500932E86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01281E282604F2D500932E86 /* GoogleService-Info.plist */; };
+		013F8E382607921600EC7D42 /* MultipeerConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F8E372607921600EC7D42 /* MultipeerConnectionViewController.swift */; };
 		017A63C72602300600730865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63C62602300600730865 /* AppDelegate.swift */; };
-		017A63C92602300600730865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63C82602300600730865 /* SceneDelegate.swift */; };
 		017A63CB2602300600730865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63CA2602300600730865 /* ViewController.swift */; };
 		017A63CE2602300600730865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017A63CC2602300600730865 /* Main.storyboard */; };
 		017A63D02602300700730865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017A63CF2602300700730865 /* Assets.xcassets */; };
@@ -20,10 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01281E282604F2D500932E86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "num-rand-game/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		01281E282604F2D500932E86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		013F8E372607921600EC7D42 /* MultipeerConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionViewController.swift; sourceTree = "<group>"; };
 		017A63C32602300600730865 /* num-rand-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "num-rand-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		017A63C62602300600730865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		017A63C82602300600730865 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		017A63CA2602300600730865 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		017A63CD2602300600730865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		017A63CF2602300700730865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +51,6 @@
 		017A63BA2602300600730865 = {
 			isa = PBXGroup;
 			children = (
-				01281E282604F2D500932E86 /* GoogleService-Info.plist */,
 				017A63C52602300600730865 /* num-rand-game */,
 				017A63C42602300600730865 /* Products */,
 				5C81B76207CEAB130052D096 /* Pods */,
@@ -70,9 +69,10 @@
 		017A63C52602300600730865 /* num-rand-game */ = {
 			isa = PBXGroup;
 			children = (
+				01281E282604F2D500932E86 /* GoogleService-Info.plist */,
 				017A63C62602300600730865 /* AppDelegate.swift */,
-				017A63C82602300600730865 /* SceneDelegate.swift */,
 				017A63CA2602300600730865 /* ViewController.swift */,
+				013F8E372607921600EC7D42 /* MultipeerConnectionViewController.swift */,
 				017A63E326039D9B00730865 /* SetupDifficultyViewController.swift */,
 				017A63DD26023BB100730865 /* GamePlayViewController.swift */,
 				017A63CC2602300600730865 /* Main.storyboard */,
@@ -97,7 +97,6 @@
 				386947374BC840ECE03280CF /* Pods-num-rand-game.debug.xcconfig */,
 				2DA2F9C35E0B4F8B7C000DF5 /* Pods-num-rand-game.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -220,7 +219,7 @@
 				017A63C72602300600730865 /* AppDelegate.swift in Sources */,
 				017A63DE26023BB100730865 /* GamePlayViewController.swift in Sources */,
 				017A63E426039D9B00730865 /* SetupDifficultyViewController.swift in Sources */,
-				017A63C92602300600730865 /* SceneDelegate.swift in Sources */,
+				013F8E382607921600EC7D42 /* MultipeerConnectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
