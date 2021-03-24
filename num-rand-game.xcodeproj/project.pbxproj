@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01281E292604F2D500932E86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01281E282604F2D500932E86 /* GoogleService-Info.plist */; };
 		017A63C72602300600730865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63C62602300600730865 /* AppDelegate.swift */; };
 		017A63CB2602300600730865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63CA2602300600730865 /* ViewController.swift */; };
 		017A63CE2602300600730865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017A63CC2602300600730865 /* Main.storyboard */; };
@@ -15,11 +14,12 @@
 		017A63D32602300700730865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017A63D12602300700730865 /* LaunchScreen.storyboard */; };
 		017A63DE26023BB100730865 /* GamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63DD26023BB100730865 /* GamePlayViewController.swift */; };
 		017A63E426039D9B00730865 /* SetupDifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63E326039D9B00730865 /* SetupDifficultyViewController.swift */; };
+		01815B00260BB0AA00FB5E7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01815AFF260BB0AA00FB5E7E /* GoogleService-Info.plist */; };
+		0193FF1E260BC8400091C421 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0193FF1C260BC8400091C421 /* Model.xcdatamodeld */; };
 		3B0E1823DA55B6378C71B5AD /* Pods_num_rand_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BC01393D7FF5B684B499AA /* Pods_num_rand_game.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01281E282604F2D500932E86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		017A63C32602300600730865 /* num-rand-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "num-rand-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		017A63C62602300600730865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		017A63CA2602300600730865 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +29,8 @@
 		017A63D42602300700730865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		017A63DD26023BB100730865 /* GamePlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayViewController.swift; sourceTree = "<group>"; };
 		017A63E326039D9B00730865 /* SetupDifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupDifficultyViewController.swift; sourceTree = "<group>"; };
+		01815AFF260BB0AA00FB5E7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0193FF1D260BC8400091C421 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2DA2F9C35E0B4F8B7C000DF5 /* Pods-num-rand-game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-num-rand-game.release.xcconfig"; path = "Target Support Files/Pods-num-rand-game/Pods-num-rand-game.release.xcconfig"; sourceTree = "<group>"; };
 		386947374BC840ECE03280CF /* Pods-num-rand-game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-num-rand-game.debug.xcconfig"; path = "Target Support Files/Pods-num-rand-game/Pods-num-rand-game.debug.xcconfig"; sourceTree = "<group>"; };
 		50BC01393D7FF5B684B499AA /* Pods_num_rand_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_num_rand_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,8 @@
 		017A63C52602300600730865 /* num-rand-game */ = {
 			isa = PBXGroup;
 			children = (
+				01815B0B260BBEEB00FB5E7E /* Model */,
+				01815AFF260BB0AA00FB5E7E /* GoogleService-Info.plist */,
 				017A63D42602300700730865 /* Info.plist */,
 				01815AE9260B9CDB00FB5E7E /* Controller */,
 				01815AEA260B9D8200FB5E7E /* Resources */,
@@ -88,12 +92,19 @@
 		01815AEA260B9D8200FB5E7E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				01281E282604F2D500932E86 /* GoogleService-Info.plist */,
 				017A63CC2602300600730865 /* Main.storyboard */,
 				017A63D12602300700730865 /* LaunchScreen.storyboard */,
 				017A63CF2602300700730865 /* Assets.xcassets */,
+				0193FF1C260BC8400091C421 /* Model.xcdatamodeld */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		01815B0B260BBEEB00FB5E7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2EDD49975696DF1CE119E4D1 /* Frameworks */ = {
@@ -173,7 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				017A63D32602300700730865 /* LaunchScreen.storyboard in Resources */,
-				01281E292604F2D500932E86 /* GoogleService-Info.plist in Resources */,
+				01815B00260BB0AA00FB5E7E /* GoogleService-Info.plist in Resources */,
 				017A63D02602300700730865 /* Assets.xcassets in Resources */,
 				017A63CE2602300600730865 /* Main.storyboard in Resources */,
 			);
@@ -230,6 +241,7 @@
 			files = (
 				017A63CB2602300600730865 /* ViewController.swift in Sources */,
 				017A63C72602300600730865 /* AppDelegate.swift in Sources */,
+				0193FF1E260BC8400091C421 /* Model.xcdatamodeld in Sources */,
 				017A63DE26023BB100730865 /* GamePlayViewController.swift in Sources */,
 				017A63E426039D9B00730865 /* SetupDifficultyViewController.swift in Sources */,
 			);
@@ -433,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0193FF1C260BC8400091C421 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0193FF1D260BC8400091C421 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0193FF1D260BC8400091C421 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 017A63BB2602300600730865 /* Project object */;
 }
