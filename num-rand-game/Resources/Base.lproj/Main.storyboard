@@ -33,6 +33,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qd-zW-HZD">
+                                <rect key="frame" x="82" y="524" width="250" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Dp5-77-chc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <state key="normal" title="Multiplayer"/>
+                                <connections>
+                                    <segue destination="zc3-vd-sHK" kind="presentation" modalPresentationStyle="fullScreen" id="Pc9-jb-MnW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mj3-N8-gUU"/>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,10 +51,13 @@
                             <constraint firstItem="lgr-hO-26X" firstAttribute="top" secondItem="cHG-25-VC9" secondAttribute="bottom" constant="110" id="6Dr-M4-mJu"/>
                             <constraint firstItem="lgr-hO-26X" firstAttribute="centerX" secondItem="mj3-N8-gUU" secondAttribute="centerX" id="ATk-Fl-25b"/>
                             <constraint firstItem="lgr-hO-26X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M6I-Vu-pHU"/>
+                            <constraint firstItem="1qd-zW-HZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mwi-bX-8ef"/>
+                            <constraint firstItem="1qd-zW-HZD" firstAttribute="top" secondItem="lgr-hO-26X" secondAttribute="bottom" constant="44" id="hX0-kn-lju"/>
                             <constraint firstItem="cHG-25-VC9" firstAttribute="centerX" secondItem="mj3-N8-gUU" secondAttribute="centerX" id="pRz-Qg-74O"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="multiplayerButton" destination="1qd-zW-HZD" id="U84-Jo-tb4"/>
                         <outlet property="prevScoreLabel" destination="cHG-25-VC9" id="QLI-GO-W0z"/>
                         <outlet property="startGameButton" destination="lgr-hO-26X" id="kAg-za-orX"/>
                     </connections>
@@ -51,6 +65,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zCE-jF-XcA">
+            <objects>
+                <viewController id="iqv-4l-jPC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QKN-vi-gcR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mc3-YV-YQe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bw8-pk-v94">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DsX-TL-NaT">
+                            <color key="tintColor" systemColor="linkColor"/>
+                            <connections>
+                                <segue destination="nrZ-d1-PJ1" kind="unwind" unwindAction="unwindToMainScreenWithSegue:" id="znC-Qu-RMl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Svt-Ht-7qU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nrZ-d1-PJ1" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="689.85507246376812" y="835.04464285714278"/>
         </scene>
         <!--Game Play View Controller-->
         <scene sceneID="lxo-aj-CrG">
@@ -205,11 +243,35 @@
             </objects>
             <point key="canvasLocation" x="669.56521739130437" y="75.669642857142847"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LcX-bA-Djp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zc3-vd-sHK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eMu-Ih-SNs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pdp-dO-hSJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="iqv-4l-jPC" kind="relationship" relationship="rootViewController" id="UgT-Y0-yqL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xdn-Ly-eiB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220.28985507246378" y="834.375"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="OQJ-xN-STF"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

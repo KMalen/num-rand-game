@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01281E292604F2D500932E86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01281E282604F2D500932E86 /* GoogleService-Info.plist */; };
-		013F8E382607921600EC7D42 /* MultipeerConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F8E372607921600EC7D42 /* MultipeerConnectionViewController.swift */; };
 		017A63C72602300600730865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63C62602300600730865 /* AppDelegate.swift */; };
 		017A63CB2602300600730865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A63CA2602300600730865 /* ViewController.swift */; };
 		017A63CE2602300600730865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017A63CC2602300600730865 /* Main.storyboard */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		01281E282604F2D500932E86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		013F8E372607921600EC7D42 /* MultipeerConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionViewController.swift; sourceTree = "<group>"; };
 		017A63C32602300600730865 /* num-rand-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "num-rand-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		017A63C62602300600730865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		017A63CA2602300600730865 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,18 +67,33 @@
 		017A63C52602300600730865 /* num-rand-game */ = {
 			isa = PBXGroup;
 			children = (
-				01281E282604F2D500932E86 /* GoogleService-Info.plist */,
-				017A63C62602300600730865 /* AppDelegate.swift */,
-				017A63CA2602300600730865 /* ViewController.swift */,
-				013F8E372607921600EC7D42 /* MultipeerConnectionViewController.swift */,
-				017A63E326039D9B00730865 /* SetupDifficultyViewController.swift */,
-				017A63DD26023BB100730865 /* GamePlayViewController.swift */,
-				017A63CC2602300600730865 /* Main.storyboard */,
-				017A63CF2602300700730865 /* Assets.xcassets */,
-				017A63D12602300700730865 /* LaunchScreen.storyboard */,
 				017A63D42602300700730865 /* Info.plist */,
+				01815AE9260B9CDB00FB5E7E /* Controller */,
+				01815AEA260B9D8200FB5E7E /* Resources */,
+				017A63C62602300600730865 /* AppDelegate.swift */,
 			);
 			path = "num-rand-game";
+			sourceTree = "<group>";
+		};
+		01815AE9260B9CDB00FB5E7E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				017A63CA2602300600730865 /* ViewController.swift */,
+				017A63DD26023BB100730865 /* GamePlayViewController.swift */,
+				017A63E326039D9B00730865 /* SetupDifficultyViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		01815AEA260B9D8200FB5E7E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01281E282604F2D500932E86 /* GoogleService-Info.plist */,
+				017A63CC2602300600730865 /* Main.storyboard */,
+				017A63D12602300700730865 /* LaunchScreen.storyboard */,
+				017A63CF2602300700730865 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		2EDD49975696DF1CE119E4D1 /* Frameworks */ = {
@@ -219,7 +232,6 @@
 				017A63C72602300600730865 /* AppDelegate.swift in Sources */,
 				017A63DE26023BB100730865 /* GamePlayViewController.swift in Sources */,
 				017A63E426039D9B00730865 /* SetupDifficultyViewController.swift in Sources */,
-				013F8E382607921600EC7D42 /* MultipeerConnectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
