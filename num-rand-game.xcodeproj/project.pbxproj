@@ -74,11 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				01815B0B260BBEEB00FB5E7E /* Model */,
-				01815AFF260BB0AA00FB5E7E /* GoogleService-Info.plist */,
-				017A63D42602300700730865 /* Info.plist */,
 				01815AE9260B9CDB00FB5E7E /* Controller */,
 				01815AEA260B9D8200FB5E7E /* Resources */,
 				017A63C62602300600730865 /* AppDelegate.swift */,
+				01815AFF260BB0AA00FB5E7E /* GoogleService-Info.plist */,
+				017A63D42602300700730865 /* Info.plist */,
 			);
 			path = "num-rand-game";
 			sourceTree = "<group>";

@@ -16,17 +16,23 @@ class ViewController: UIViewController {
     
     var prevScore = 0
     
+    //Reference to managed object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var gameScores: [GameScore]?
+    
+    
     // init firestore
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setUpButtons()
+        fetchScore()
     }
 
     @IBAction func unwindToMainScreen(segue: UIStoryboardSegue){
-        prevScoreLabel.text = "Previous Score: \(prevScore)"
+        addScore()
     }
     
     func setUpButtons(){
@@ -37,6 +43,51 @@ class ViewController: UIViewController {
         multiplayerButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         multiplayerButton.layer.backgroundColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
         multiplayerButton.layer.cornerRadius = 15
+    }
+    
+    // Fetch the data from Core Data to display
+    func fetchScore(){
+        do {
+            self.gameScores = try context.fetch(GameScore.fetchRequest())
+            
+            if gameScores?.count != 0 {
+                prevScore = Int(gameScores?[0].prev_score ?? 0)
+            }
+            DispatchQueue.main.async {
+                self.prevScoreLabel.text = "Previous Score: \(self.prevScore)"
+            }
+        } catch {
+            
+        }
+    }
+    
+    func addScore(){
+        
+        if gameScores?.count == 0 {
+            let newGameScores = GameScore(context: self.context)
+            newGameScores.prev_score = Int64(prevScore)
+            
+            do {
+                try self.context.save()
+            } catch {
+                
+            }
+            self.fetchScore()
+        } else {
+            self.updateScore()
+        }
+    }
+    
+    func updateScore(){
+        gameScores?[0].prev_score  = Int64(prevScore)
+        
+        do {
+            try self.context.save()
+        } catch {
+            
+        }
+        
+        self.fetchScore()
     }
     
     // add data func for firestore (firebase test func)
